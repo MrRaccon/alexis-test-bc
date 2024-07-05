@@ -1,6 +1,5 @@
 package com.bettercloud.alexis.code_interview.model;
 
-import java.sql.Date;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -42,7 +41,7 @@ public class Family {
     @Column(name = "family_name", nullable = false, length = 50)
     private String familyName;
 
-    @OneToMany(mappedBy = "family", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "family", fetch = FetchType.LAZY)
     private List<Person> members;
 
 
