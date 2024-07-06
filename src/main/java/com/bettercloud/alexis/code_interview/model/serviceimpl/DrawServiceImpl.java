@@ -77,7 +77,7 @@ public class DrawServiceImpl implements DrawService {
 				Person giver = entry.getValue();
 				DrawDto drawDto = new DrawDto(receiver.getFirstName(), giver.getFirstName());
 				response.add(drawDto);
-				log.info("Receiver {} .... Receiver {}", receiver.getFirstName(), giver.getFirstName());
+				log.info("Receiver {} .... Giver {}", receiver.getFirstName(), giver.getFirstName());
 
 			}
 		}
