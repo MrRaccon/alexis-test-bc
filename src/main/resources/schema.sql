@@ -49,3 +49,33 @@ INSERT INTO person VALUES (1,1,'2024-07-04 21:49:06','Carlos','jsosodsd'),
 (7,3,'2024-07-04 21:49:06','Martha','ssjqjwj');
 
 INSERT INTO draw_selection VALUES (1,1,4,2021),(2,1,4,2022),(3,1,4,2023),(4,2,5,2022),(5,2,7,2023),(6,7,2,2023);
+
+
+-- SEGUNDA ETAPA, DONDE NO SE PUEDEN EMPAREJAR TODOS
+
+
+INSERT INTO user_sys_draw VALUES (2,'2024-07-04 21:36:51','NICKNAME2');
+INSERT INTO family VALUES 
+(4,2,'2024-07-04 21:40:39','Correa'),
+(5,2,'2024-07-04 21:40:39','Andrade');
+
+INSERT INTO person VALUES (8,4,'2024-07-04 21:49:06','Andrea','ksjqowjsb'),
+(9,4,'2024-07-04 21:49:06','Ana','ksk1j232'),
+(10,5,'2024-07-04 21:49:06','Camila','osos18sn2');
+
+-- UNO YA DIO UN REGALO A OTRO
+
+
+INSERT INTO user_sys_draw VALUES (3,'2024-07-04 21:36:51','NICKNAME3');
+INSERT INTO family VALUES 
+(6,3,'2024-07-04 21:40:39','Per'),
+(7,3,'2024-07-04 21:40:39','Coyoc');
+
+INSERT INTO person VALUES 
+(11,6,'2024-07-04 21:49:06','Andrea','92jsu'),
+(12,6,'2024-07-04 21:49:06','Ana','0sn198sg'),
+(13,7,'2024-07-04 21:49:06','Camila','o2i2j'),
+(14,7,'2024-07-04 21:49:06','Norma','92j2n2is');
+INSERT INTO draw_selection VALUES (7,12,13,2021),(8,12,14,2022);
+
+

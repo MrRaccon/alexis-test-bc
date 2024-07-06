@@ -20,7 +20,6 @@ import com.bettercloud.alexis.code_interview.model.service.DrawService;
 import com.bettercloud.alexis.code_interview.repository.DrawSelectionRepository;
 import com.bettercloud.alexis.code_interview.repository.FamilyRepository;
 
-import lombok.extern.log4j.Log4j;
 import lombok.extern.log4j.Log4j2;
 
 @Service
@@ -70,16 +69,16 @@ public class DrawServiceImpl implements DrawService {
 			attempts++;
 		} while (drawExecuted.containsValue(null) && attempts < maxAttempts); // Reintentar hasta que no haya null o se
 																				// alcance el límite de intentos
-
 		if (drawExecuted.containsValue(null)) {
-			log.info("No fue posible encontrar una combinacion correcta");
+			log.info("It's not possible get a draw");
 		} else {
 			for (Map.Entry<Person, Person> entry : drawExecuted.entrySet()) {
-				DrawDto drawDto = new DrawDto(entry.getValue().getFirstName(), entry.getKey().getFirstName());
-				response.add(drawDto);
 				Person receiver = entry.getKey();
 				Person giver = entry.getValue();
-				System.out.println("Receiver: " + receiver.getFirstName() + ", giver: " + giver.getFirstName());
+				DrawDto drawDto = new DrawDto(receiver.getFirstName(), giver.getFirstName());
+				response.add(drawDto);
+				log.info("Receiver {} .... Receiver {}", receiver.getFirstName(), giver.getFirstName());
+
 			}
 		}
 		return response;
